@@ -1,8 +1,6 @@
 def reverseWords(s):
 	t = [word for word in s.strip().split() if word != ' ']
 	t.reverse()
-	print(type(t))
-	print(t)
 	return ' '.join(t)
 
 def main():
