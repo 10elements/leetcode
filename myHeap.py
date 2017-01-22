@@ -15,6 +15,17 @@ class myHeap(object):
 	def __str__(self):
 		return str(self.heap)
 
+	def __iter__(self):
+		return iter(self.heap)
+
+	def __getitem(self, key):
+		try:
+			return self.heap[key]
+		except IndexError:
+			raise
+		except TypeError:
+			raise 
+
 	def insert(self, val):
 		"""
 		insert an element into the heap in O(logn) time, n is the number of elements in the heap
