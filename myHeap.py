@@ -6,7 +6,7 @@ class myHeap(object):
 	"""
 	def __init__(self):
 
-		# a list where elements rest in, reresenting a binary tree
+		# a list where elements rest, reresenting a binary tree
 		self.heap = []
 
 		# the size of heap
@@ -14,6 +14,17 @@ class myHeap(object):
 
 	def __str__(self):
 		return str(self.heap)
+
+	def __iter__(self):
+		return iter(self.heap)
+
+	def __getitem(self, key):
+		try:
+			return self.heap[key]
+		except IndexError:
+			raise
+		except TypeError:
+			raise 
 
 	def insert(self, val):
 		"""
